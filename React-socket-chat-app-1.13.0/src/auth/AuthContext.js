@@ -1,5 +1,5 @@
-import React, { createContext, useCallback, useState } from 'react';
-import { fetchConToken, fetchSinToken } from '../helpers/fetch';
+import React, { createContext, useCallback, useState } from "react";
+import { fetchConToken, fetchSinToken } from "../helpers/fetch";
 
 export const AuthContext = createContext();
 
@@ -11,17 +11,37 @@ const initialState = {
     email: null,
 };
 
-
 export const AuthProvider = ({ children }) => {
+    const [auth, setAuth] = useState(initialState);
 
-    const [ auth, setAuth ] = useState(initialState)
+    const login = async (email, password) => {
+        const resp = await fetchSinToken("login", { email, password }, "POST");
 
-    const login = async( email, password ) => {
+        if (resp.ok) {
+            localStorage.setItem("token", resp.token);
+            const { user } = resp;
 
-        const resp = await fetchSinToken('login', { email, password }, 'POST');
+            setAuth({
+                uid: user.uid,
+                checking: false,
+                logged: true,
+                name: user.name,
+                email: user.email,
+            });
+        }
 
-        if ( resp.ok ) {
-            localStorage.setItem('token', resp.token );
+        return resp.ok;
+    };
+
+    const register = async (name, email, password) => {
+        const resp = await fetchSinToken(
+            "login/new",
+            { name, email, password },
+            "POST"
+        );
+
+        if (resp.ok) {
+            localStorage.setItem("token", resp.token);
             const { user } = resp;
 
             setAuth({
@@ -32,54 +52,30 @@ export const AuthProvider = ({ children }) => {
                 email: user.email,
             });
 
-        }
-
-        return resp.ok;
-
-    }
-
-    const register = async(nombre, email, password) => {
-
-        const resp = await fetchSinToken('login/new', { nombre, email, password }, 'POST');
-        
-        if ( resp.ok ) {
-            localStorage.setItem('token', resp.token );
-            const { user } = resp;
-
-            setAuth({
-                uid: user.uid,
-                checking: false,
-                logged: true,
-                name: user.nombre,
-                email: user.email,
-            });
-
             return true;
         }
 
         return resp.msg;
+    };
 
-    }
-
-    const verificaToken = useCallback( async() => {
-
-        const token = localStorage.getItem('token');
+    const verificaToken = useCallback(async () => {
+        const token = localStorage.getItem("token");
         // Si token no existe
-        if ( !token ) {
+        if (!token) {
             setAuth({
                 uid: null,
                 checking: false,
                 logged: false,
                 name: null,
                 email: null,
-            })
+            });
 
             return false;
         }
 
-        const resp = await fetchConToken('login/renew');
-        if ( resp.ok ) {
-            localStorage.setItem('token', resp.token );
+        const resp = await fetchConToken("login/renew");
+        if (resp.ok) {
+            localStorage.setItem("token", resp.token);
             const { user } = resp;
 
             setAuth({
@@ -102,28 +98,27 @@ export const AuthProvider = ({ children }) => {
 
             return false;
         }
-
-    }, [])
+    }, []);
 
     const logout = () => {
-        localStorage.removeItem('token');
+        localStorage.removeItem("token");
         setAuth({
             checking: false,
             logged: false,
         });
-    }
-
+    };
 
     return (
-        <AuthContext.Provider value={{
-            auth,
-            login,
-            register,
-            verificaToken,
-            logout,
-        }}>
-            { children }
+        <AuthContext.Provider
+            value={{
+                auth,
+                login,
+                register,
+                verificaToken,
+                logout,
+            }}
+        >
+            {children}
         </AuthContext.Provider>
-    )
-}
-
+    );
+};
