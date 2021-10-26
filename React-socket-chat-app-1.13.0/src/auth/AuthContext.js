@@ -33,10 +33,10 @@ export const AuthProvider = ({ children }) => {
         return resp.ok;
     };
 
-    const register = async (name, email, password) => {
+    const register = async (name, email,password, typeUser) => {
         const resp = await fetchSinToken(
             "login/new",
-            { name, email, password },
+            { name, email,password, typeUser },
             "POST"
         );
 
@@ -50,6 +50,7 @@ export const AuthProvider = ({ children }) => {
                 logged: true,
                 name: user.name,
                 email: user.email,
+                typeUser:user.typeUser
             });
 
             return true;
@@ -68,6 +69,7 @@ export const AuthProvider = ({ children }) => {
                 logged: false,
                 name: null,
                 email: null,
+                typeUser:null
             });
 
             return false;
@@ -84,6 +86,7 @@ export const AuthProvider = ({ children }) => {
                 logged: true,
                 name: user.name,
                 email: user.email,
+                typeUser: user.typeUser
             });
 
             return true;
@@ -94,6 +97,7 @@ export const AuthProvider = ({ children }) => {
                 logged: false,
                 name: null,
                 email: null,
+                typeUser: null,
             });
 
             return false;

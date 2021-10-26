@@ -14,10 +14,10 @@ const UsuarioSchema = Schema({
         type: String,
         required: true,
     },
-    // typeUser: {
-    //     type: String,
-    //     required: true,
-    // },
+    typeUser: {
+        type: String,
+        required: true,
+    },
     online: {
         type: Boolean,
         default: false,

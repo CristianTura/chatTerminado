@@ -5,6 +5,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { RegisterPage } from '../pages/RegisterPage';
 
 import '../css/login-register.css';
+import Home from '../pages/HomePage';
 
 export const AuthRouter = () => {
     return (
@@ -12,12 +13,12 @@ export const AuthRouter = () => {
         <div className="limiter">
 		    <div className="container-login100">
 			    <div className="wrap-login100 p-t-50 p-b-90">
-
                     <Switch>
+                        <Route exact path="/auth" component={ Home } />
                         <Route exact path="/auth/login" component={ LoginPage } />
                         <Route exact path="/auth/register" component={ RegisterPage } />
 
-                        <Redirect to="/auth/login" />
+                        <Redirect to="/auth" />
                     </Switch>
 
                 </div>

@@ -4,13 +4,13 @@
 	padding: 0px; 
 	box-sizing: border-box;
 }
-
+/* 
 body, html {
 	height: 100%;
-}
+} */
 
 /*---------------------------------------------*/
-a {
+/* a {
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -28,10 +28,10 @@ a:focus {
 a:hover {
 	text-decoration: none;
   color: #403866;
-}
+} */
 
 /*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
+/* h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
 
@@ -45,11 +45,11 @@ p {
 ul, li {
 	margin: 0px;
 	list-style-type: none;
-}
+} */
 
 
 /*---------------------------------------------*/
-input {
+/* input {
 	outline: none;
 	border: none;
 }
@@ -76,10 +76,10 @@ textarea:-ms-input-placeholder { color: #8f8fa1;}
 label {
   display: block;
   margin: 0;
-}
+} */
 
 /*---------------------------------------------*/
-button {
+/* button {
 	outline: none !important;
 	border: none;
 	background: transparent;
@@ -92,22 +92,22 @@ button:hover {
 iframe {
 	border: none !important;
 }
-
+ */
 
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
-.txt1 {
+/* .txt1 {
   font-size: 16px;
   color: #827ffe;
   line-height: 1.4;
 }
 
-
+ */
 
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
 
-.limiter {
+/* .limiter {
   width: 100%;
   margin: 0 auto;
 }
@@ -137,12 +137,12 @@ iframe {
   border-radius: 10px;
   position: relative;
 }
-
+ */
 
 /*==================================================================
 [ Form ]*/
 
-.login100-form {
+/* .login100-form {
   width: 100%;
 }
 
@@ -157,11 +157,11 @@ iframe {
   display: block;
 }
 
-
+ */
 
 /*------------------------------------------------------------------
 [ Input ]*/
-
+/* 
 .wrap-input100 {
   width: 100%;
   position: relative;
@@ -169,10 +169,10 @@ iframe {
   border: 1px solid transparent;
   border-radius: 3px;
 }
-
+ */
 
 /*---------------------------------------------*/
-.input100 {
+/* .input100 {
   color: #403866;
   line-height: 1.2;
   font-size: 18px;
@@ -182,11 +182,11 @@ iframe {
   background: transparent;
   height: 62px;
   padding: 0 20px 0 38px;
-}
+} */
 /*------------------------------------------------------------------
 [ Focus Input ]*/
 
-.focus-input100 {
+/* .focus-input100 {
   position: absolute;
   display: block;
   width: calc(100% + 2px);
@@ -233,11 +233,11 @@ iframe {
   -o-transform: scale(1);
   transform: scale(1);
 }
-
+ */
 
 /*==================================================================
 [ Restyle Checkbox ]*/
-
+/* 
 .input-checkbox100 {
   display: none;
 }
@@ -283,12 +283,12 @@ iframe {
 
 .input-checkbox100:checked + .label-checkbox100::before {
   color: #827ffe;
-}
+} */
 
 
 /*------------------------------------------------------------------
 [ Button ]*/
-.container-login100-form-btn {
+/* .container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -330,12 +330,12 @@ iframe {
 
 .login100-form-btn:disabled {
   background-color: grey;
-}
+} */
 
 /*------------------------------------------------------------------
 [ Alert validate ]*/
 
-.validate-input {
+/* .validate-input {
   position: relative;
 }
 
@@ -397,7 +397,7 @@ iframe {
     opacity: 1;
   }
 }
-
+ */
 
 /*//////////////////////////////////////////////////////////////////
 [ Responsive ]*/
