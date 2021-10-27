@@ -1,0 +1,20 @@
+.middle-screen {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 60%;
+    text-align: center;
+    display: none;
+}
+.alert-info{
+    background-color: #fff;
+}
+
+@media(min-width:1024px){
+    .middle-screen{
+        display: block;
+        width: 36%;
+        left:37%;
+    }
+    
+}

@@ -1,0 +1,28 @@
+.type_msg {
+    border-top: 1px solid #c4c4c4;
+    position: relative;
+}
+.input_msg_write{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input_msg_write input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    color: #4c4c4c;
+    font-size: 15px;
+    min-height: 48px;
+    width: 100%;
+}
+
+.msg_send_btn {
+    background: #7674FE none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 33px;
+    width: 70px;
+}

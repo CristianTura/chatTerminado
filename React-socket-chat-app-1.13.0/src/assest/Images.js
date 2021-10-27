@@ -15,6 +15,7 @@ import more from './imgs/more.svg'
 import mp3 from './imgs/mp3.svg'
 import png from './imgs/png.svg'
 import link from './imgs/link.svg'
+import Back from './imgs/Back.svg'
 // eslint-disable-next-line import/no-anonymous-default-export
 export default{
     logo,
@@ -33,5 +34,6 @@ export default{
     more,
     mp3,
     png,
-    link
+    link,
+    Back
 }

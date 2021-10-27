@@ -13,6 +13,7 @@ const initialState = {
 
 export const AuthProvider = ({ children }) => {
     const [auth, setAuth] = useState(initialState);
+    const [chat, setChat] = useState(true)
 
     const login = async (email, password) => {
         const resp = await fetchSinToken("login", { email, password }, "POST");
@@ -120,6 +121,8 @@ export const AuthProvider = ({ children }) => {
                 register,
                 verificaToken,
                 logout,
+                chat,
+                setChat,
             }}
         >
             {children}

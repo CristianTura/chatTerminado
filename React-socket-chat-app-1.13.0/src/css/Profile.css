@@ -1,0 +1,176 @@
+.profile_contant{
+    width: 100%;
+}
+.phone{
+    width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.phone >img {
+    width: 20%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #5cb85c;
+}
+.phone>h3{
+    padding: 10px;
+    font-size:8vw;
+    font-weight: 600;
+}
+.phone>p{
+    font-size: 4.5vw;
+    color: #79869F;
+}
+.profile_items{
+    width: 100%;
+    margin-top:1%;
+    margin-bottom: 6%;
+    display: flex;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.items_D{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.items_D>img{
+    width: 20%;
+}
+.items_D>p{
+    font-size:5vw;
+    color: #79869F;
+}
+.profile_contant>h2{
+    margin: 10% 10% 6%;
+    font-size:5.8vw;
+    color: #0F3F62;
+}
+.attach{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.attach>p{
+    font-size: 6vw;
+    font-weight:500;
+    color: #B0B6C3;
+}
+.attach>h3{
+    font-size: 6vw;
+    font-weight: 400;
+    color:#189fff;
+    margin-right: 10%;
+}
+
+.attach_items_t{
+    display: flex;
+    margin-left: 10%;
+    margin-bottom: 4%;
+}
+.attach_items_t>img{
+    width: 6%;
+}
+.attach_items_t>p{
+    color:#B0B6C3;
+    margin-left: 5%;
+}
+.pictures{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    margin-left: 10%;
+    justify-content: center;
+}
+.pictures>img{
+    width: 100%;
+}
+.close{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.close>img{
+    width: 7%;
+    margin: 4% 0 2% 6%;
+}
+.close>h3{
+    margin-top: 5%;
+    font-size: 5vw;
+    margin-left: 5%;
+    color: #B0B6C3;
+    cursor: pointer;
+}
+.close>h3:hover,
+.close>img:hover{
+    color: #189fff;
+}
+
+
+@media(min-width:1024px){
+    .profile_contant{
+        position: absolute;
+        width: 27%;
+        right:0;
+        height: 100vh;
+        top: 0;        
+        overflow-y: scroll;
+    }
+    .phone{
+        height: none;
+    }
+    .phone>h3{
+        font-size: 2vw;
+    }
+    .phone>p{
+        font-size: 1.5vw;
+    }
+    .items_D>p {
+        font-size: 1vw;
+    }
+    .profile_items{
+        margin-top: 0;
+        margin-bottom: -6%;
+
+    }
+    .profile_contant>h2{
+        font-size: 2vw;
+        margin: 6% 10% 6%;
+
+    }
+    .attach_items_t {
+        margin-bottom: -1%;
+
+    }
+    .attach{
+        margin-bottom: 0;
+    }
+    .attach>p {
+        font-size: 1.5vw;
+    }
+    .attach>h3{
+        font-size: 1.5vw;
+    }
+    .pictures>img {
+        width: 72%;
+    }
+    .close{
+        display: none;
+    }
+   
+}
+@media(min-width:1024px){
+    
+    .pictures>img {
+        width: 72%;
+    }
+}
+

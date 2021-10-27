@@ -1,6 +1,6 @@
 import React from 'react'
 import { horaMes } from '../helpers/horaMes'
-
+import '../css/OutgoingMenssage.css'
 export const OutgoingMessage = ({ msg }) => {
     return (
         <div className="outgoing_msg">

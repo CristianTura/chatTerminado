@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../auth/AuthContext';
 import { ChatContext } from '../context/chat/ChatContext';
 import { SocketContext } from '../context/SocketContext';
-
+import '../css/SendMessage.css'
 export const SendMessage = () => {
 
     const [ mensaje, setMensaje ] = useState('');
@@ -42,22 +42,21 @@ export const SendMessage = () => {
 
     return (
         <form onSubmit={ onSubmit }>
-            <div className="type_msg row">
-                <div className="input_msg_write col-sm-9">
+            <div className="type_msg">
+                <div className="input_msg_write">
                     <input
                         type="text"
-                        className="write_msg"
                         placeholder="Mensaje..."
                         value={ mensaje }
                         onChange={ onChange }
                     />
-                </div>
-                <div className="col-sm-3 text-center">
-                    <button className="msg_send_btn mt-3" type="submit">
+                    <button className="msg_send_btn" type="submit">
                         enviar
                     </button>
                 </div>
-            </div>
+               
+                </div>
+        
         </form>
     )
 }

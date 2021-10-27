@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { AuthContext } from '../auth/AuthContext'
 
 export const Searchbox = () => {
-
+ 
     const { auth, logout } = useContext( AuthContext );
 
     return (

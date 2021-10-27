@@ -3,8 +3,9 @@ import React, { useContext } from 'react';
 import { ChatContext } from '../context/chat/ChatContext';
 import { fetchConToken } from '../helpers/fetch';
 import { scrollToBottom } from '../helpers/scrollToBottom';
-
+import '../css/SidebarChatItem.css'
 import { types } from '../types/types';
+import { AuthContext } from '../auth/AuthContext';
 
 export const SidebarChatItem = ({ usuario }) => {
 
@@ -27,18 +28,21 @@ export const SidebarChatItem = ({ usuario }) => {
 
         scrollToBottom('mensajes');
     }
-
+    const {chat, setChat}= useContext(AuthContext)
+    const mes_active=()=>{
+        setChat(!chat)
+    }
     return (
         <div
             className={`chat_list ${ (usuario.uid === chatActivo) && 'active_chat' }`}
             onClick={ onClick }
         >
             {/* active_chat */}
-            <div className="chat_people">
-                <div className="chat_img"> 
+            <div className="messages_contant" onClick={mes_active}>
+                <div className="messages_photo"> 
                     <img src="https://p.kindpng.com/picc/s/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" alt="sunil" />
                 </div>
-                <div className="chat_ib">
+                <div className="messages_data">
                     <h5> { usuario.name } </h5>
                     {
                         ( usuario.online )

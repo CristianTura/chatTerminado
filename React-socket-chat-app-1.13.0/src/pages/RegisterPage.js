@@ -6,8 +6,6 @@ import { AuthContext } from '../auth/AuthContext';
 import Images from '../assest/Images';
 
 
-
-
 export const RegisterPage = () => {
 
     const { register } = useContext( AuthContext );

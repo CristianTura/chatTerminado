@@ -1,0 +1,7 @@
+.incoming_msg {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-left: 3%;
+}
+

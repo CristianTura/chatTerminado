@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../css/ChatSelect.css'
 export const ChatSelect = () => {
     return (
         <div className="middle-screen">
