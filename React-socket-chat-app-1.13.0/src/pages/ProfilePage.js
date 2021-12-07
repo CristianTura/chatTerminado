@@ -13,7 +13,7 @@ const Profile = () => {
                     <h3>{auth.name}</h3>
                     <p>{auth.typeUser}</p>
                 </div>
-                <div className="profile_items">
+                {/* <div className="profile_items">
                     <div className="items_D">
                         <img src={Images.cell} alt="cell" />
                         <p>llamar</p>
@@ -26,11 +26,11 @@ const Profile = () => {
                         <img src={Images.more} alt="more" />
                         <p>mas</p>
                     </div>
-                </div>
-                <h2>Archivos abjuntos</h2>
+                </div> */}
+                <h2>Archivos adjuntos</h2>
                 <div className="attach">
-                    <p>Achivo funte</p>
-                    <h3>Ver todo</h3>
+                    <p>Achivo fuente</p>
+                    {/* <h3>Ver todo</h3> */}
                 </div>
                 <div className="attach_items">
                         <div className="attach_items_t">
@@ -46,7 +46,7 @@ const Profile = () => {
                             <p>Final file.pdf</p>
                         </div>
                 </div>
-                <h2>Fotos y videos</h2>
+               {/*  <h2>Fotos y videos</h2>
                 <div className="pictures">
                     <img src={Images.contacts} alt="" />
                     <img src={Images.contacts} alt="" />
@@ -57,7 +57,7 @@ const Profile = () => {
                     <img src={Images.contacts} alt="" />
                     <img src={Images.contacts} alt="" />
                     <img src={Images.contacts} alt="" />
-                </div>
+                </div> */}
                 <div className="close">
                 <img src={Images.close} alt="close" />
                 <h3 onClick={logout}>Cerrar Sesión</h3>

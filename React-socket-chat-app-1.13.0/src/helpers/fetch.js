@@ -1,4 +1,4 @@
-const baseUrl = process.env.REACT_APP_API_URL;
+const baseUrl = "https://chat-back-app.herokuapp.com/api";
 
 export const fetchSinToken = async( endpoint, data, method = 'GET' ) => {
 
